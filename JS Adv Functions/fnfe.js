@@ -82,5 +82,53 @@
 // }
 
 // let counter = makeCounter();
+// counter.count = 10;
 // console.log(counter()); // 0
 // console.log(counter()); // 1
+
+// let sayHi = function(who) {
+//     console.log(`Hello, ${who}`);
+// };
+
+// let sayHi = function func(who) {
+//     if (who)
+//         console.log(`Hello, ${who}`);
+//     else
+//         console.log("Guest");
+// };
+
+// sayHi("Agnel");
+// sayHi();
+
+// let sayHi = function func(who) {
+//     if (who) {
+//         console.log(`Hello, ${who}`);
+//     } else {
+//         func("Guest"); // Now all fine
+//     }
+// };
+
+// let welcome = sayHi;
+// sayHi = null;
+
+// welcome();
+// function sum(a) {
+
+//     let currentSum = a;
+
+//     function f(b) {
+//         currentSum += b;
+//         return f;
+//     }
+
+//     f.toString = function() {
+//         return currentSum;
+//     };
+
+//     return f;
+// }
+
+// alert(sum(1)(2)); // 3
+// alert(sum(5)(-1)(2)); // 6
+// alert(sum(6)(-1)(-2)(-3)); // 0
+// alert(sum(0)(1)(2)(3)(4)(5));
