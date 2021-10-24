@@ -38,19 +38,49 @@
 // alert(many.length); 
 // alert(confirm("Hi"));
 
-function ask(question, ...handlers) {
-  let isYes = confirm(question);
+// function ask(question, ...handlers) {
+//   let isYes = confirm(question);
 
-  for(let handler of handlers) {
-    if (handler.length == 0) {
-      if (isYes) handler();
-    } else {
-      handler(isYes);
-    }
-  }
+//   for(let handler of handlers) {
+//     if (handler.length == 0) {
+//       if (isYes) handler();
+//     } else {
+//       handler(isYes);
+//     }
+//   }
 
-}
+// }
 
-// for positive answer, both handlers are called
-// for negative answer, only the second one
-ask("Question?", () => alert('You said yes'), result => alert(result));
+// // for positive answer, both handlers are called
+// // for negative answer, only the second one
+// ask("Question?", () => alert('You said yes'), result => alert(result));
+
+// function sayHi() {
+//     console.log("Hi");
+
+//     // let's count how many times we run
+//     sayHi.counter++;
+// }
+// sayHi.counter = 0; // initial value
+
+// sayHi(); // Hi
+// sayHi(); // Hi
+
+// console.log(`Called ${sayHi.counter} times`);
+
+// function makeCounter() {
+//     // instead of:
+//     // let count = 0
+
+//     function counter() {
+//         return counter.count++;
+//     };
+
+//     counter.count = 0;
+
+//     return counter;
+// }
+
+// let counter = makeCounter();
+// console.log(counter()); // 0
+// console.log(counter()); // 1
